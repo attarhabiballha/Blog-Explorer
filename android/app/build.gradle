@@ -2,9 +2,10 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
+    apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 }
 
-def localProperties = new Properties()
+def localProperties =  Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
